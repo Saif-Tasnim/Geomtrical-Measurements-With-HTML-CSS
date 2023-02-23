@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometrical Measurement</title>
+
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+
+<body>
+
+    <!-- header area start -->
+
+    <header class="mx-5 my-5">
+        <div class="d-flex justify-content-between bg-info  rounded">
+            <div>
+                <h2 class="px-4 pt-2">Interactive </h2>
+                <h6 class="px-4">Geometry Genius</h6>
+            </div>
+
+            <div class="my-3 me-5  rounded">
+                <button id="blog-btn" class="btn text-white px-3 py-2 bg-primary mt-2">
+                    Blog
+                </button>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- header area end -->
+
+    <!-- Main Part Start -->
+
+    <section class="mb-3">
+        <!-- card design add -->
+      <div class="row row-cols-1 row-cols-md-4 g-4 mx-3 mb-4">
+
+            <!-- triangle -->
+            <div class="col" >
+                <div class="card h-100" id="t-col">
+                    <img src="images/triangle.png" class="card-img-top w-50 img-fluid mx-auto my-2" alt="...">
+                    <div class="card-body">
+                        <h4 class="text-center">Triangle</h4>
+                        <p class="text-center mb-4">Area (A) = 0.5 * b * h </p>
+                        <div class="d-inline">
+                            <input type="text" name="" id="tri-b" placeholder="b"
+                                class="w-25 ms-5 form-control d-inline"> cm
+
+                            <input type="text" name="" id="tri-h" placeholder="h"
+                                class="w-25 ms-4 form-control d-inline"> cm
+                        </div>
+
+                        <button class="btn bg-primary w-75 text-white mt-4 text-center mx-4 rounded px-3" id="tri">
+                            Calculate</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rectangle -->
+            <div class="col">
+                <div class="card h-100" id="r-col">
+                    <img src="images/rectangle.png" class="card-img-top w-50 img-fluid mx-auto my-2" alt="...">
+                    <div class="card-body">
+                        <h4 class="text-center">Rectangle</h4>
+                        <p class="text-center mb-4">Area (A) = w * l </p>
+                        <div class="d-inline">
+                            <input type="text" name="" id="rec-w" placeholder="w"
+                                class="w-25 ms-5 form-control d-inline"> cm
+
+                            <input type="text" name="" id="rec-l" placeholder="l"
+                                class="w-25 ms-4 form-control d-inline"> cm
+                        </div>
+
+                        <button class="btn bg-primary w-75 text-white mt-4 text-center mx-4 rounded px-3" id="rec">
+                            Calculate</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parallelogram -->
+            <div class="col">
+                <div class="card h-100" id="p-col">
+                    <img src="images/parallelogram.png" class="card-img-top w-50 img-fluid mx-auto my-2" alt="...">
+                    <div class="card-body">
+                        <h4 class="text-center">Parallelogram</h4>
+                        <p class="text-center mb-4">Area (A) = b * h </p>
+                        <div class="d-inline">
+                            <input type="text" name="" id="para-b" placeholder="b"
+                                class="w-25 ms-5 form-control d-inline"> cm
+
+                            <input type="text" name="" id="para-h" placeholder="h"
+                                class="w-25 ms-4 form-control d-inline"> cm
+                        </div>
+
+                        <button class="btn bg-primary w-75 text-white mt-4 text-center mx-4 rounded px-3" id="para">
+                            Calculate</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculation card -->
+            <div class="col">
+                <div class="card h-100 ">
+                   <h4 class="text-center text-decoration-underline">Area Calculation</h4>
+                   <div id="upper-div" class="ms-2 mt-2">
+
+                   </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-4 g-4 mx-3">
+            <!-- Rhombus -->
+            <div class="col">
+                <div class="card h-100" id="rh-col">
+                    <img src="images/rhombus.png" class="card-img-top w-50 img-fluid mx-auto my-2" alt="...">
+                    <div class="card-body">
+                        <h4 class="text-center">Rhombus</h4>
+                        <p class="text-center mb-4">Area (A) = 0.5 * d1 * d2 </p>
+                        <div class="d-inline">
+                            <input type="text" name="" id="rh-d1" placeholder="d1"
+                                class="w-25 ms-5 form-control d-inline"> cm
+
+                            <input type="text" name="" id="rh-d2" placeholder="d2"
+                                class="w-25 ms-4 form-control d-inline"> cm
+                        </div>
+
+                        <button class="btn bg-primary w-75 text-white mt-4 text-center mx-4 rounded px-3" id="rh">
+                            Calculate</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pentagon -->
+            <div class="col">
+                <div class="card h-100" id="pen-col">
+                    <img src="images/pentagon.png" class="card-img-top w-50 img-fluid mx-auto my-2" alt="...">
+                    <div class="card-body">
+                        <h4 class="text-center">Pentagon</h4>
+                        <p class="text-center mb-4">Area (A) = 0.5 * p * b </p>
+                        <div class="d-inline">
+                            <input type="text" name="" id="penta-p" placeholder="p"
+                                class="w-25 ms-5 form-control d-inline"> cm
+
+                            <input type="text" name="" id="penta-b" placeholder="b"
+                                class="w-25 ms-4 form-control d-inline"> cm
+                        </div>
+
+                        <button class="btn bg-primary w-75 text-white mt-4 text-center mx-4 rounded px-3" id="penta">
+                            Calculate</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ellipse -->
+            <div class="col">
+                <div class="card h-100" id="e-col">
+                    <img src="images/ellipse.png" class="card-img-top w-50 img-fluid mx-auto my-2" alt="...">
+                    <div class="card-body">
+                        <h4 class="text-center">Ellipse</h4>
+                        <p class="text-center mb-4">Area (A) = &pi; * a * b </p>
+                        <div class="d-inline">
+                            <input type="text" name="" id="pi-a" placeholder="a"
+                                class="w-25 ms-5 form-control d-inline"> cm
+
+                            <input type="text" name="" id="pi-b" placeholder="b"
+                                class="w-25 ms-4 form-control d-inline"> cm
+                        </div>
+
+                        <button class="btn bg-primary w-75 text-white mt-4 text-center mx-4 rounded px-3" id="ec">
+                            Calculate</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Main Part End -->
+    <!-- connect with js -->
+    <!-- custom js -->
+    <script src="js/function.js"></script>
+    <script src="js/main.js"> </script>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
